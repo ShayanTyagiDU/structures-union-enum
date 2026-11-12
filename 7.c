@@ -305,4 +305,15 @@ int main() {
         free(tasks);
     }
     return 0;
+    /*Enter command: add
+Enter Task ID (positive integer): 1
+Enter Description: morning walk
+Success: Task 1 added.
+
+Enter command: view
+
+--- Task List ---
+[PENDING] ID: 1 | morning walk
+
+//output
 }
