@@ -159,4 +159,59 @@ int main() {
     display_record(&edge_test);
 
     return 0;
+    /*=== PART 1: MEMORY LAYOUT ANALYSIS ===
+Sizes:
+  sizeof(StructData) = 28 bytes
+  sizeof(UnionData)  = 20 bytes
+  sizeof(TaggedRecord) = 24 bytes
+
+Alignments:
+  alignof(StructData) = 4 bytes
+  alignof(UnionData)  = 4 bytes
+
+Structure Member Offsets (stddef.h -> offsetof):
+  Offset of sdata.i   : 0 bytes
+  Offset of sdata.f   : 4 bytes
+  Offset of sdata.str : 8 bytes
+
+Memory Addresses (Struct vs Union):
+  sdata base address : 00000086825FF960
+  sdata.i address    : 00000086825FF960
+  sdata.f address    : 00000086825FF964
+  sdata.str address  : 00000086825FF968
+  ---
+  udata base address : 00000086825FF940
+  udata.i address    : 00000086825FF940
+  udata.f address    : 00000086825FF940
+  udata.str address  : 00000086825FF940
+
+Bulk Memory Usage (100 records):
+  100 Structs : 2800 bytes
+  100 Unions  : 2000 bytes
+
+
+=== PART 2: SAFE TAGGED UNION DEMONSTRATION ===
+Populating 5 tagged records...
+Record 1:   [INT]   10
+Record 2:   [FLOAT] 220.50
+Record 3:   [TEXT]  Union Programming
+Record 4:   [INT]   999
+Record 5:   [TEXT]  Short String
+
+=== PART 3: EDGE CASE TESTS ===
+Test A: Maximum valid string length (19 chars):
+  [TEXT]  1234567890123456789
+
+Test B: Overlength string (25 chars):
+  [Error] String 'This string is way too long' exceeds 19 characters. Assignment rejected.
+  [TEXT]  1234567890123456789
+
+Test C: Switching single record (Int -> Text -> Float):
+  [INT]   42
+  [TEXT]  Overwritten!
+  [FLOAT] 3.14
+
+Test D: Invalid Tag Recovery:
+  [ERROR] Invalid or uninitialized tag detected!*/
+    //output
 }
