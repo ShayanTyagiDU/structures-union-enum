@@ -304,4 +304,35 @@ int main() {
     } while (choice != 8);
 
     return 0;
+    /*Enter initial inventory capacity (1-1000): 23
+
+=== Rectangle Inventory Menu ===
+1. Add Rectangle
+2. Display All
+3. Update Dimensions
+4. Delete Rectangle
+5. Analytics Summary
+6. Display Sorted (Area)
+7. Filter by Area Threshold
+8. Exit
+Select an option: 1
+Enter unique positive Rectangle ID: 1
+Enter width: 23
+Enter height: 98
+Success: Rectangle 1 added.
+
+=== Rectangle Inventory Menu ===
+1. Add Rectangle
+2. Display All
+3. Update Dimensions
+4. Delete Rectangle
+5. Analytics Summary
+6. Display Sorted (Area)
+7. Filter by Area Threshold
+8. Exit
+Select an option: 2
+
+--- Rectangle Inventory (1/23) ---
+ID: 1     | W: 23.00  | H: 98.00  | Area: 2254.00  | Perim: 242.00   | Type: Rectangle*/
+    //output
 }
