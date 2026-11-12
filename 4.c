@@ -335,4 +335,35 @@ int main() {
     } while (choice != 8);
 
     return 0;
+    /*Enter initial capacity (>0): 1
+
+=== Student Records Menu ===
+1. Add Student
+2. Display All
+3. Search Student
+4. Update Student
+5. Delete Student
+6. Academic Analytics
+7. Display Sorted (GPA)
+8. Exit
+Select an option: 1
+Enter unique Roll Number (positive integer): 1
+Enter Name (max 49 chars): aarav
+Enter Age (16-100): 21
+Enter GPA (0.00-4.00): 3.2
+Success: Student added.
+
+=== Student Records Menu ===
+1. Add Student
+2. Display All
+3. Search Student
+4. Update Student
+5. Delete Student
+6. Academic Analytics
+7. Display Sorted (GPA)
+8. Exit
+Select an option: 3
+Enter Roll Number to search: 1
+Found: Roll: 1 | Name: aarav | Age: 21 | GPA: 3.20*/
+    // output
 }
